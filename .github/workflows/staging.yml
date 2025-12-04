@@ -80,4 +80,4 @@ jobs:
             cd /var/www/stock-keeping-staging
             npm ci --omit=dev
             pm2 restart stock-keeping-staging || NEXT_PUBLIC_API_BASE_URL=$NEXT_PUBLIC_API_BASE_URL NEXT_PUBLIC_GOOGLE_CLIENT_ID=$NEXT_PUBLIC_GOOGLE_CLIENT_ID pm2 start node_modules/.bin/next --name stock-keeping-staging --cwd /var/www/stock-keeping-staging -- start -p 3002
-            pm2 save      
+            pm2 save    
